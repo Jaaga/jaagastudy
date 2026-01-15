@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JaagaStudy - Solarpunk Education for Creative AI">
+    <meta name="description" content="JaagaStudy - Building Skill-Based Communities for the Future of Work">
     <title>JaagaStudy | Future of Learning</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
 
 <body>
     <nav>
-        <div class="logo">Jaaga<span>Study</span></div>
+        <div class="logo"><a href="index.html">Jaaga<span>Study</span></a></div>
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="bootcamp.html">Bootcamp</a>
@@ -25,40 +25,93 @@
     </nav>
 
     <main>
-        <section class="hero">
+        <!-- Title Section -->
+        <section class="hero" style="min-height: 80vh;">
             <img src="images/hero-solarpunk.png" alt="Solarpunk City" class="hero-bg">
             <div class="hero-content">
-                <p class="tagline">The Future is Green & Gold</p>
-                <h1>Creative AI Bootcamp</h1>
-                <p class="hero-description">Join us to build a Solarpunk future. Master Generative AI, collaborate with
-                    artists and coders, and launch your ideas.</p>
+                <h1>Jaaga Study</h1>
+                <p class="subtitle" style="color: var(--secondary-color); font-weight: 500;">Building Skill-Based
+                    Communities for the Future of Work.</p>
                 <div class="actions">
-                    <a href="bootcamp.html" class="btn btn-primary">Join Today</a>
-                    <a href="https://discord.gg/example" class="btn btn-outline">Community</a>
+                    <a href="https://example.com/signup" class="btn btn-primary">Sign Up for Updates</a>
                 </div>
             </div>
         </section>
 
+        <!-- What is Jaaga Study? -->
         <section class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">What is Jaaga Study?</h2>
+
+            <div class="card" style="max-width: 900px; margin: 0 auto 3rem;">
+                <p style="font-size: 1.1rem; color: #cbd5e1; text-align: center; margin-bottom: 0;">
+                    Jaaga Study is a community-driven learning laboratory. We move away from traditional lectures and
+                    toward intensive, peer-led sprints that focus on emerging technology and creative expression. We
+                    believe the best way to learn is by doing—together. Join our mailing list to be the first to know
+                    when we launch new cohorts.
+                </p>
+            </div>
+
+            <h3 style="text-align: center; color: var(--secondary-color); margin-bottom: 1.5rem;">How We Learn</h3>
             <div class="grid">
                 <div class="card">
-                    <h3>Learn & Build</h3>
-                    <p>Immersive learning cycles focusing on bleeding-edge AI tools and creative hacking.</p>
+                    <h3 class="text-teal">Hands-on First</h3>
+                    <p>No passive watching; we build from day one.</p>
                 </div>
                 <div class="card">
-                    <h3>Community First</h3>
-                    <p>A vibrant Discord community of weirdos, creators, and technologists.</p>
+                    <h3 class="text-teal">Peer-to-Peer</h3>
+                    <p>Learn alongside a vibrant community of creators.</p>
                 </div>
                 <div class="card">
-                    <h3>Solarpunk Ethos</h3>
-                    <p>Optimistic tech-positive future building. High tech, low life? No. High tech, high nature.</p>
+                    <h3 class="text-teal">Online-First</h3>
+                    <p>Accessible, virtual programs designed for global collaboration.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-teal">Experimental</h3>
+                    <p>We play with tools at the bleeding edge, from AI to decentralized tech.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Programs -->
+        <section class="container"
+            style="background: radial-gradient(circle at center, rgba(45,212,191,0.05), transparent 70%); border-radius: 24px;">
+            <h2 style="text-align: center;">Upcoming Programs</h2>
+
+            <div class="card" style="max-width: 900px; margin: 2rem auto; border-color: var(--secondary-color);">
+                <div style="text-align: center;">
+                    <h1>Creative AI Bootcamp</h1>
+                    <p class="subtitle" style="color: var(--secondary-color);">Make cool stuff with AI. Together.</p>
+
+                    <p style="font-size: 1.1rem; color: #cbd5e1; margin: 2rem 0;">
+                        An experimental extension of the Mars College Creative AI Program. Dive into a nine-week journey
+                        to explore AI Agents, video generation, and creative automation. This is a hands-on space to
+                        experiment with the Eden.Art ecosystem alongside other enthusiasts.
+                    </p>
+
+                    <div
+                        style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 12px; display: inline-block; margin-bottom: 2rem;">
+                        <p style="font-weight: 600; color: var(--text-color); margin-bottom: 0.5rem;">Jan 19 – Mar 13 |
+                            9 Weeks | Discord</p>
+                        <p style="color: var(--secondary-color); margin-bottom: 0;">Join the cohort by Jan 18th</p>
+                    </div>
+
+                    <div>
+                        <a href="https://discord.gg/example" class="btn btn-primary">Join Discord</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Partners - Using restored CSS -->
     <footer>
-
+        <div class="partners-section">
+            <h3 style="color: var(--text-color);">Partners</h3>
+            <div class="partners">
+                <img src="images/partners/mars-college.png" alt="Mars College" class="partner-logo">
+                <img src="images/partners/eden-art.png" alt="Eden Art" class="partner-logo">
+            </div>
+        </div>
         <p class="copyright">&copy; 2026 Jaaga Study. Built with Hope.</p>
     </footer>
 </body>

@@ -23,7 +23,14 @@
             <a href="blog.html">Blog</a>
             <a href="https://discord.gg/ZtakuZXEF" target="_blank" class="discord-btn">Join Discord</a>
         </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
     <main>
         <div class="page-header">

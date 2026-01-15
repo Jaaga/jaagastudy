@@ -23,7 +23,14 @@
             <a href="blog.html">Blog</a>
             <a href="https://discord.gg/ZtakuZXEF" target="_blank" class="discord-btn">Join Discord</a>
         </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
     <main>
         <!-- Title Section -->
@@ -176,8 +183,8 @@
 
         <!-- Partners -->
         <section class="container">
+            <h2 style="text-align: center;">Partners</h2>
             <div class="partners-section">
-                <h3 style="color: var(--text-color);">Partners</h3>
                 <div class="partners">
                     <a href="https://www.mars.college/" target="_blank" style="text-decoration: none;">
                         <div class="partner-item mars-container">

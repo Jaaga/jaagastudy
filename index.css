@@ -712,6 +712,28 @@ footer {
     color: white;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
 footer h3,
 footer .partner-text {
     color: white !important;

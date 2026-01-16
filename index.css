@@ -761,4 +761,63 @@ footer .partner-text {
 
 .light-section .right::before {
     border-color: transparent #e2e8f0 transparent transparent;
+}/* Manifesto Section Styling */
+.manifesto-container {
+    max-width: 800px;
+    margin: 3rem auto 5rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.manifesto-lead {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    font-weight: 700;
+    color: var(--secondary-color); /* Deep Blue */
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.manifesto-lead .highlight-text {
+    color: var(--primary-color); /* Orange Highlight */
+    position: relative;
+    display: inline-block;
+}
+
+/* Optional: Add a subtle underline decoration to the highlight */
+.manifesto-lead .highlight-text::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(243, 83, 36, 0.1); /* Soft Orange */
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.manifesto-body {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #4a5568; /* Soft readable gray */
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.manifesto-body strong {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.manifesto-bolder {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(120deg, var(--secondary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }

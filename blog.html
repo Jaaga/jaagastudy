@@ -1,105 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Blog | jaagastudy
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | jaagastudy</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/jaaga_logo.png">
-    <meta property="og:image" content="https://haricm.github.io/jaagastudy/images/jaaga_logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://haricm.github.io/jaagastudy/images/jaaga_logo.png">
-</head>
+<div class="page-header">
+    <h1>Blog</h1>
+    <p class="hero-description">Thoughts, announcements, and updates.</p>
+</div>
 
-<body>
-    <nav>
-        <div class="logo"><a href="index.html">Jaaga<span>Study</span></a></div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="bootcamps/creative-ai-bootcamp/01.html">Bootcamp</a>
-
-            <a href="blog.html" class="active">Blog</a>
-            <a href="https://discord.gg/ZtakuZXEF" target="_blank" class="discord-btn">Join Discord</a>
-        </div>
-        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-    </nav>
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
-
-    <main>
-        <div class="page-header">
-            <h1>Blog</h1>
-            <p class="hero-description">Thoughts, announcements, and updates.</p>
+<div class="light-section">
+    <section class="container">
+        <!-- Tag Filter -->
+        <div class="tags-nav">
+            <button class="tag-btn active" onclick="filterPosts('all')">All</button>
+            <button class="tag-btn" onclick="filterPosts('announcement')">Announcement</button>
         </div>
 
-        <div class="light-section">
-            <section class="container">
-                <!-- Tag Filter -->
-                <div class="tags-nav">
-                    <button class="tag-btn active" onclick="filterPosts('all')">All</button>
-                    <button class="tag-btn" onclick="filterPosts('announcement')">Announcement</button>
+        <div class="grid" id="blog-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+
+            <!-- Post 1 -->
+            <article class="card" data-tags="announcement">
+                <div style="margin-bottom: 0.5rem;">
+                    <span class="tag-pill">Announcement</span>
                 </div>
+                <span class="meta" style="font-size: 0.9rem; color: #666; display: block; margin-bottom: 0.5rem;">Jan
+                    12, 2026</span>
+                <a href="{{ '/blog/001-jaaga-study-is-back.html' | relative_url }}">
+                    <h3>Jaaga Study is back!</h3>
+                </a>
+                <p>We are thrilled to launch the first cohort of the Creative AI Bootcamp. This 9-week
+                    experiment
+                    brings together artists, coders, and dreamers.</p>
+                <a href="{{ '/blog/001-jaaga-study-is-back.html' | relative_url }}" class="btn-outline"
+                    style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
+            </article>
 
-                <div class="grid" id="blog-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
-
-                    <!-- Post 1 -->
-                    <article class="card" data-tags="announcement">
-                        <div style="margin-bottom: 0.5rem;">
-                            <span class="tag-pill">Announcement</span>
-                        </div>
-                        <span class="meta"
-                            style="font-size: 0.9rem; color: #666; display: block; margin-bottom: 0.5rem;">Jan 12,
-                            2026</span>
-                        <a href="blog/001-jaaga-study-is-back.html">
-                            <h3>Jaaga Study is back!</h3>
-                        </a>
-                        <p>We are thrilled to launch the first cohort of the Creative AI Bootcamp. This 9-week
-                            experiment
-                            brings together artists, coders, and dreamers.</p>
-                        <a href="blog/001-jaaga-study-is-back.html" class="btn-outline"
-                            style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
-                    </article>
-
-                </div>
-            </section>
         </div>
-    </main>
+    </section>
+</div>
 
-    <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com/groups/jaaga.study/" target="_blank" class="social-link">Facebook</a>
-            <a href="https://x.com/jaagastudy" target="_blank" class="social-link">X / Twitter</a>
-            <a href="https://it.linkedin.com/company/jaagastudy" target="_blank" class="social-link">LinkedIn</a>
-            <a href="https://www.instagram.com/jaagastudy/" target="_blank" class="social-link">Instagram</a>
-        </div>
-        <p class="copyright">&copy; 2026 Jaaga Study. Built with Hope.</p>
-    </footer>
+<script>
+    function filterPosts(tag) {
+        // Update active button
+        const buttons = document.querySelectorAll('.tag-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
 
-    <script>
-        function filterPosts(tag) {
-            // Update active button
-            const buttons = document.querySelectorAll('.tag-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            // Filter posts
-            const posts = document.querySelectorAll('.card[data-tags]');
-            posts.forEach(post => {
-                const tags = post.getAttribute('data-tags').split(' ');
-                if (tag === 'all' || tags.includes(tag)) {
-                    post.style.display = 'block';
-                } else {
-                    post.style.display = 'none';
-                }
-            });
-        }
-    </script>
-</body>
-
-</html>
+        // Filter posts
+        const posts = document.querySelectorAll('.card[data-tags]');
+        posts.forEach(post => {
+            const tags = post.getAttribute('data-tags').split(' ');
+            if (tag === 'all' || tags.includes(tag)) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
+    }
+</script>

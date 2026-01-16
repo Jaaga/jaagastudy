@@ -1,105 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Resources | jaagastudy
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources | jaagastudy</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/jaaga_logo.png">
-    <meta property="og:image" content="https://haricm.github.io/jaagastudy/images/jaaga_logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://haricm.github.io/jaagastudy/images/jaaga_logo.png">
-</head>
+<div class="page-header">
+    <h1>Resources</h1>
+    <p class="hero-description">Tools and materials for your journey.</p>
+</div>
 
-<body>
-    <nav>
-        <div class="logo"><a href="index.html">Jaaga<span>Study</span></a></div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="bootcamps/creative-ai-bootcamp/01.html">Bootcamp</a>
-
-            <a href="blog.html">Blog</a>
-            <a href="https://discord.gg/ZtakuZXEF" target="_blank" class="discord-btn">Join Discord</a>
-        </div>
-        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-    </nav>
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
-
-    <main>
-        <div class="page-header">
-            <h1>AI / Tech Resources</h1>
-            <p class="hero-description">Curated tools and readings for the modern builder.</p>
+<div class="light-section">
+    <section class="container">
+        <!-- Tag Filter -->
+        <div class="tags-nav">
+            <button class="tag-btn active" onclick="filterResources('all')">All</button>
+            <button class="tag-btn" onclick="filterResources('ai-tools')">AI Tools</button>
+            <button class="tag-btn" onclick="filterResources('reading')">Reading</button>
+            <button class="tag-btn" onclick="filterResources('community')">Community</button>
         </div>
 
-        <div class="light-section">
-            <section class="container">
-                <div class="grid">
-                    <!-- AI Tools -->
-                    <div class="card">
-                        <span class="meta">Generative AI</span>
-                        <h3>Hugging Face</h3>
-                        <p>The platform with the most models. Essential for any AI practitioner.</p>
-                        <a href="#" class="btn-outline"
-                            style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Visit</a>
-                    </div>
-                    <div class="card">
-                        <span class="meta">Framework</span>
-                        <h3>LangChain</h3>
-                        <p>Building applications with LLMs through composability.</p>
-                        <a href="#" class="btn-outline"
-                            style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Visit</a>
-                    </div>
-                    <div class="card">
-                        <span class="meta">Art</span>
-                        <h3>CivitAI</h3>
-                        <p>A community for sharing AI art models and LoRAs.</p>
-                        <a href="#" class="btn-outline"
-                            style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Visit</a>
-                    </div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
 
-                    <!-- Tech / Solarpunk -->
-                    <div class="card">
-                        <span class="meta">Manifesto</span>
-                        <h3>Solarpunk Notes</h3>
-                        <p>Essays on optimizing for modularity, sustainability, and hope.</p>
-                        <a href="#" class="btn-outline"
-                            style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Read</a>
-                    </div>
-                    <div class="card">
-                        <span class="meta">Code</span>
-                        <h3>Replit</h3>
-                        <p>Collaborative browser-based IDE. Great for quick hacks.</p>
-                        <a href="#" class="btn-outline"
-                            style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Visit</a>
-                    </div>
-                    <div class="card">
-                        <span class="meta">Community</span>
-                        <h3>Are.na</h3>
-                        <p>A platform for connecting ideas and building knowledge.</p>
-                        <a href="#" class="btn-outline"
-                            style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Visit</a>
-                    </div>
+            <!-- Resource Card 1 -->
+            <div class="card resource-card" data-tags="ai-tools">
+                <div style="margin-bottom: 1rem;">
+                    <span class="tag-pill">AI Tools</span>
                 </div>
-            </section>
-        </div>
-    </main>
+                <h3>ComfyUI</h3>
+                <p>The most powerful node-based interface for Stable Diffusion. Essential for advanced workflows.</p>
+                <a href="https://github.com/comfyanonymous/ComfyUI" target="_blank" class="btn-outline">Visit
+                    Repo</a>
+            </div>
 
-    <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com/groups/jaaga.study/" target="_blank" class="social-link">Facebook</a>
-            <a href="https://x.com/jaagastudy" target="_blank" class="social-link">X / Twitter</a>
-            <a href="https://it.linkedin.com/company/jaagastudy" target="_blank" class="social-link">LinkedIn</a>
-            <a href="https://www.instagram.com/jaagastudy/" target="_blank" class="social-link">Instagram</a>
-        </div>
-        <p class="copyright">&copy; 2026 Jaaga Study. Built with Hope.</p>
-    </footer>
-</body>
+            <!-- Resource Card 2 -->
+            <div class="card resource-card" data-tags="community">
+                <div style="margin-bottom: 1rem;">
+                    <span class="tag-pill">Community</span>
+                </div>
+                <h3>Mars College</h3>
+                <p>Our partner community in the California desert. A living lab for off-grid tech and art.</p>
+                <a href="https://mars.college" target="_blank" class="btn-outline">Visit Site</a>
+            </div>
 
-</html>
+            <!-- Resource Card 3 -->
+            <div class="card resource-card" data-tags="reading">
+                <div style="margin-bottom: 1rem;">
+                    <span class="tag-pill">Reading</span>
+                </div>
+                <h3>Solarpunk Manifesto</h3>
+                <p>A literary movement, a hashtag, a flag, and a statement of intent about the future we want to build.
+                </p>
+                <a href="https://www.re-des.org/a-solarpunk-manifesto/" target="_blank" class="btn-outline">Read
+                    More</a>
+            </div>
+
+            <!-- Resource Card 4 -->
+            <div class="card resource-card" data-tags="ai-tools">
+                <div style="margin-bottom: 1rem;">
+                    <span class="tag-pill">AI Tools</span>
+                </div>
+                <h3>Eden.Art</h3>
+                <p>A generative AI platform for artists. Create infinite variations of your ideas.</p>
+                <a href="https://eden.art" target="_blank" class="btn-outline">Start Creating</a>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<script>
+    function filterResources(tag) {
+        // Update active button
+        const buttons = document.querySelectorAll('.tag-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        // Filter cards
+        const cards = document.querySelectorAll('.resource-card[data-tags]');
+        cards.forEach(card => {
+            const tags = card.getAttribute('data-tags');
+            if (tag === 'all' || tags === tag) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>

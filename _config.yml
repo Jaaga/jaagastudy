@@ -1,0 +1,22 @@
+title: jaagastudy
+description: A New Kind of School for a New Way of Living.
+url: "https://haricm.github.io"
+baseurl: "/jaagastudy"
+
+navigation:
+  - title: Home
+    url: /
+  - title: Bootcamp
+    url: /bootcamps/creative-ai-bootcamp/01.html
+  - title: Blog
+    url: /blog.html
+  - title: Join Discord
+    url: "https://discord.gg/ZtakuZXEF"
+    external: true
+    class: discord-btn
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

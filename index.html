@@ -1,124 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: jaagastudy | Future of Learning
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="jaagastudy - Building Skill-Based Communities for the Future of Work">
-    <title>jaagastudy | Future of Learning</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/jaaga_logo.png">
-    <meta property="og:image" content="https://haricm.github.io/jaagastudy/images/jaaga_logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://haricm.github.io/jaagastudy/images/jaaga_logo.png">
-</head>
-
-<body>
-    <nav>
-        <div class="logo"><a href="index.html">Jaaga<span>Study</span></a></div>
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="bootcamps/creative-ai-bootcamp/01.html">Bootcamp</a>
-
-            <a href="blog.html">Blog</a>
-            <a href="https://discord.gg/ZtakuZXEF" target="_blank" class="discord-btn">Join Discord</a>
+<!-- Title Section -->
+<section class="hero" style="min-height: 60vh; align-items: center; display: flex;">
+    <div class="hero-content">
+        <h1>Jaaga Study</h1>
+        <p class="subtitle" style="color: #e2e8f0; font-weight: 500; margin-bottom: 2rem;">A New Kind of School for a
+            New Way of Living.</p>
+        <div class="actions">
+            <a href="https://example.com/signup" class="btn btn-primary">Sign Up for Updates</a>
         </div>
-        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-    </nav>
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+    </div>
+</section>
 
-    <main>
-        <!-- Title Section -->
-        <!-- Title Section -->
-        <section class="hero" style="min-height: 60vh; align-items: center; display: flex;">
-            <div class="hero-content">
-                <h1>Jaaga Study</h1>
-                <p class="subtitle" style="color: #e2e8f0; font-weight: 500; margin-bottom: 2rem;">A New Kind of School
-                    for a
-                    New Way of Living.</p>
-                <div class="actions">
-                    <a href="https://example.com/signup" class="btn btn-primary">Sign Up for Updates</a>
+<!-- Light Content Section -->
+<div class="light-section">
+
+    <!-- Manifesto / Intro -->
+    <section class="container">
+        <div class="manifesto-container">
+            <h2 class="manifesto-lead">
+                Technology should make us <span class="highlight-text">more independent,</span> not less.
+            </h2>
+
+            <p class="manifesto-body">
+                Jaaga Study is a community-driven learning laboratory dedicated to the craft of collective
+                self-reliance.
+                We move beyond being consumers of tech to become <strong>architects of our own
+                    world</strong>—mastering the skills to live, learn, and thrive by building ambitious
+                projects together.
+            </p>
+
+            <p class="manifesto-bolder">
+                Remote. Sustainable. Entirely in our hands.
+            </p>
+        </div>
+    </section>
+
+    <!-- Upcoming Programs -->
+    <section class="container">
+        <h2 style="text-align: center;">Upcoming Programs</h2>
+        <div class="grid" style="justify-content: center;">
+            <div class="card" style="max-width: 500px;">
+                <span class="meta">Jan 19 - Mar 13, 2026</span>
+                <h3>Creative AI Bootcamp</h3>
+                <p>A 9-week deep dive into Generative AI, Agentic Workflows, and Digital Art.
+                    Learn to build with the tools of tomorrow.</p>
+
+                <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="{{ '/bootcamps/creative-ai-bootcamp/01.html' | relative_url }}"
+                        class="btn btn-primary">View Details</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Light Content Section -->
-        <div class="light-section">
-
-            <!-- What is Jaaga Study? -->
-            <section class="container">
-                <div class="manifesto-container">
-                    <h2 class="manifesto-lead">
-                        Technology should make us <span class="highlight-text">more independent,</span> not less.
-                    </h2>
-
-                    <p class="manifesto-body">
-                        Jaaga Study is a community-driven learning laboratory dedicated to the craft of collective
-                        self-reliance.
-                        We move beyond being consumers of tech to become <strong>architects of our own
-                            world</strong>—mastering the skills to live, learn, and thrive by building ambitious
-                        projects together.
-                    </p>
-
-                    <p class="manifesto-bolder">
-                        Remote. Sustainable. Entirely in our hands.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Upcoming Programs -->
-            <section class="container">
-                <h2 style="text-align: center;">Upcoming Programs</h2>
-                <div class="grid" style="justify-content: center;">
-                    <div class="card" style="max-width: 500px;">
-                        <span class="meta">Jan 19 - Mar 13, 2026</span>
-                        <h3>Creative AI Bootcamp</h3>
-                        <p>A 9-week deep dive into Generative AI, Agentic Workflows, and Digital Art.
-                            Learn to build with the tools of tomorrow.</p>
-
-                        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="bootcamps/creative-ai-bootcamp/01.html" class="btn btn-primary">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-            <!-- Partners -->
-            <section class="container">
-                <h2 style="text-align: center; margin-bottom: 2rem; color: var(--text-dark);">Partners</h2>
-                <div class="partners-section">
-                    <div class="partners">
-                        <a href="https://www.mars.college/" target="_blank" style="text-decoration: none;">
-                            <div class="partner-item mars-container">
-                                <img src="images/partners/mars-logo.png" alt="Mars College"
-                                    class="partner-logo mars-logo">
-                                <span class="partner-text">Mars College</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-    </main>
-
-    <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com/groups/jaaga.study/" target="_blank" class="social-link">Facebook</a>
-            <a href="https://x.com/jaagastudy" target="_blank" class="social-link">X / Twitter</a>
-            <a href="https://it.linkedin.com/company/jaagastudy" target="_blank" class="social-link">LinkedIn</a>
-            <a href="https://www.instagram.com/jaagastudy/" target="_blank" class="social-link">Instagram</a>
         </div>
-        <p class="copyright">&copy; 2026 Jaaga Study. Built with Hope.</p>
-    </footer>
-</body>
+    </section>
 
-</html>
+    <!-- Partners -->
+    <section class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--text-dark);">Partners</h2>
+        <div class="partners-section">
+            <div class="partners">
+                <a href="https://www.mars.college/" target="_blank" style="text-decoration: none;">
+                    <div class="partner-item mars-container">
+                        <img src="{{ '/images/partners/mars-logo.png' | relative_url }}" alt="Mars College"
+                            class="partner-logo mars-logo">
+                        <span class="partner-text">Mars College</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>

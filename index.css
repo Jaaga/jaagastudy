@@ -825,3 +825,8 @@ footer .partner-text {
 .card h3 {
     color: #253F63 !important;
 }
+/* Fix blog roll date width */
+.card .meta {
+    display: inline-block;
+    width: fit-content;
+}

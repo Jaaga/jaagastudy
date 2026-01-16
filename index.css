@@ -1,16 +1,22 @@
 :root {
-    --bg-color: #022c22;
-    --text-color: #ecfdf5;
-    --primary-color: #2dd4bf;
-    /* Teal */
-    --secondary-color: #fbbf24;
-    /* Gold */
-    --accent-color: #10b981;
-    /* Emerald */
-    --glass-bg: rgba(2, 44, 34, 0.7);
-    --glass-border: rgba(45, 212, 191, 0.2);
-    --card-bg: rgba(255, 255, 255, 0.03);
+    --bg-color: #253F63;
+    /* Deep Blue (Hero/Footer) */
+    --content-bg: #F4EFEA;
+    /* Light Paper */
+    --text-color: #ffffff;
+    /* White for dark backgrounds */
+    --text-dark: #253F63;
+    /* Deep Blue for light backgrounds */
+    --primary-color: #F35324;
+    /* Orange */
+    --secondary-color: #253F63;
+    /* Deep Blue */
+    --accent-teal: #2EC4B6;
+    /* Teal - Rare */
     --nav-height: 80px;
+    --nav-bg: #ffffff;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --card-bg: rgba(255, 255, 255, 0.03);
 }
 
 * {
@@ -27,9 +33,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
-    background-image:
-        radial-gradient(circle at 10% 20%, rgba(45, 212, 191, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 20%);
+    /* Removed gradients for cleaner look */
 }
 
 /* Typography */
@@ -43,9 +47,7 @@ h4 {
 
 h1 {
     font-size: 3.5rem;
-    background: linear-gradient(135deg, #fff 0%, var(--primary-color) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -79,28 +81,67 @@ nav {
     align-items: center;
     padding: 0 2rem;
     z-index: 1000;
-    background: rgba(2, 44, 34, 0.8);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--glass-border);
+    background: #ffffff;
+    /* White BG */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
+    /* "Jaaga" in Orange */
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.2rem;
 }
 
 .logo span {
     color: var(--secondary-color);
+    /* "Study" in Deep Blue */
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     align-items: center;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--secondary-color);
+    /* Menu text in Deep Blue */
+    opacity: 0.9;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.discord-btn {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    opacity: 1 !important;
+}
+
+.discord-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(243, 83, 36, 0.3);
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+display: flex;
+gap: 2rem;
+align-items: center;
 }
 
 .nav-links a {
@@ -155,19 +196,14 @@ main {
     text-align: center;
     position: relative;
     padding: 4rem 2rem;
+    background: var(--bg-color);
+    /* Deep Blue */
     overflow: hidden;
 }
 
 .hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    opacity: 0.3;
-    mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+    display: none;
+    /* No images */
 }
 
 .hero-content {
@@ -181,7 +217,8 @@ main {
 
 .tagline {
     font-size: 1.2rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    /* Orange */
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 1rem;
@@ -190,7 +227,7 @@ main {
 
 .hero-description {
     font-size: 1.25rem;
-    color: #cbd5e1;
+    color: #e2e8f0;
     margin-bottom: 2.5rem;
 }
 
@@ -198,7 +235,8 @@ main {
 .page-header {
     padding: 6rem 2rem 4rem;
     text-align: center;
-    background: radial-gradient(circle at center, rgba(45, 212, 191, 0.1), transparent 70%);
+    background: var(--bg-color);
+    /* Deep Blue */
 }
 
 /* Buttons */
@@ -214,14 +252,15 @@ main {
 }
 
 .btn-primary {
-    background: var(--secondary-color);
-    color: #022c22;
+    background: var(--primary-color);
+    /* Orange #F35324 */
+    color: #ffffff;
 }
 
 .btn-primary:hover {
-    background: #fcd34d;
+    background: #d63d12;
     transform: translateY(-3px);
-    box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+    box-shadow: 0 4px 15px rgba(243, 83, 36, 0.4);
 }
 
 .btn-outline {
@@ -232,9 +271,8 @@ main {
 }
 
 .btn-outline:hover {
-    background: rgba(45, 212, 191, 0.1);
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
+    background: var(--primary-color);
+    color: #ffffff;
 }
 
 /* Section General */

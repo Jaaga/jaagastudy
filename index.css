@@ -278,11 +278,14 @@ section {
 }
 
 .card .meta {
-    font-size: 0.9rem;
-    color: var(--secondary-color);
+    display: inline-block;
+    background-color: #2EC4B6;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
     margin-bottom: 1rem;
-    display: block;
-    font-weight: 500;
 }
 
 .card p {

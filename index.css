@@ -409,16 +409,17 @@ footer {
     border-color: var(--primary-color);
 }
 
+/* Timeline Date - Dark Theme (if used) */
 .timeline-date {
     display: inline-block;
     padding: 0.2rem 0.8rem;
-    background: rgba(45, 212, 191, 0.1);
+    background: rgba(243, 83, 36, 0.1);
     color: var(--primary-color);
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 0.8rem;
-    border: 1px solid rgba(45, 212, 191, 0.2);
+    border: 1px solid rgba(243, 83, 36, 0.2);
 }
 
 /* Mobile */
@@ -573,7 +574,8 @@ footer {
 
 .tag-btn:hover,
 .tag-btn.active {
-    background: rgba(45, 212, 191, 0.1);
+    background: rgba(243, 83, 36, 0.1);
+    /* Orange Tint */
     border-color: var(--primary-color);
     color: var(--primary-color);
 }

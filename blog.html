@@ -34,31 +34,33 @@
 
     <main>
 
+        <div class="light-section">
+            <section class="container">
+                <!-- Tag Filter -->
+                <div class="tags-nav">
+                    <button class="tag-btn active" onclick="filterPosts('all')">All</button>
+                    <button class="tag-btn" onclick="filterPosts('announcement')">Announcement</button>
+                </div>
 
-        <section class="container">
-            <!-- Tag Filter -->
-            <div class="tags-nav">
-                <button class="tag-btn active" onclick="filterPosts('all')">All</button>
-                <button class="tag-btn" onclick="filterPosts('announcement')">Announcement</button>
-            </div>
+                <div class="grid" id="blog-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
 
-            <div class="grid" id="blog-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+                    <!-- Post 1 -->
+                    <article class="card" data-tags="announcement">
+                        <div style="margin-bottom: 0.5rem;">
+                            <span class="tag-pill">Announcement</span>
+                        </div>
+                        <span class="meta">Jan 12, 2026</span>
+                        <h3>Announcing Cohort 01</h3>
+                        <p>We are thrilled to launch the first cohort of the Creative AI Bootcamp. This 9-week
+                            experiment
+                            brings together artists, coders, and dreamers.</p>
+                        <a href="blog/announcing-cohort-01.html" class="btn-outline"
+                            style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
+                    </article>
 
-                <!-- Post 1 -->
-                <article class="card" data-tags="announcement">
-                    <div style="margin-bottom: 0.5rem;">
-                        <span class="tag-pill">Announcement</span>
-                    </div>
-                    <span class="meta">Jan 12, 2026</span>
-                    <h3>Announcing Cohort 01</h3>
-                    <p>We are thrilled to launch the first cohort of the Creative AI Bootcamp. This 9-week experiment
-                        brings together artists, coders, and dreamers.</p>
-                    <a href="blog/announcing-cohort-01.html" class="btn-outline"
-                        style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
-                </article>
-
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>

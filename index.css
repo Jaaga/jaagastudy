@@ -821,3 +821,7 @@ footer .partner-text {
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
+/* Blog Roll Title Color Override */
+.card h3 {
+    color: #253F63 !important;
+}

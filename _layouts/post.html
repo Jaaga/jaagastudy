@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="light-section">
+    <section class="container" style="padding-top: 2rem;">
+        <a href="{{ '/blog.html' | relative_url }}" class="back-link">← Back to Blog</a>
+
+        <article class="article-content">
+            <span class="meta" style="color: var(--secondary-color);">
+                {{ page.date | date: "%b %d, %Y" }} • {{ page.tags | join: ", " }}
+            </span>
+            <h1 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--text-dark);">
+                {{ page.title }}
+            </h1>
+
+            {{ content }}
+
+        </article>
+    </section>
+</div>

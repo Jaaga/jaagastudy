@@ -14,26 +14,31 @@ title: Blog | jaagastudy
         <div class="tags-nav">
             <button class="tag-btn active" onclick="filterPosts('all')">All</button>
             <button class="tag-btn" onclick="filterPosts('announcement')">Announcement</button>
+            <button class="tag-btn" onclick="filterPosts('philosophy')">Philosophy</button>
+            <button class="tag-btn" onclick="filterPosts('bootcamp')">Bootcamp</button>
         </div>
 
         <div class="grid" id="blog-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
 
-            <!-- Post 1 -->
-            <article class="card" data-tags="announcement">
+            {% for post in site.posts %}
+            <article class="card" data-tags="{{ post.tags | join: ' ' | downcase }}">
                 <div style="margin-bottom: 0.5rem;">
-                    <span class="tag-pill">Announcement</span>
+                    {% for tag in post.tags %}
+                    <span class="tag-pill">{{ tag }}</span>
+                    {% endfor %}
                 </div>
-                <span class="meta" style="font-size: 0.9rem; color: #666; display: block; margin-bottom: 0.5rem;">Jan
-                    12, 2026</span>
-                <a href="{{ '/blog/001-jaaga-study-is-back.html' | relative_url }}">
-                    <h3>Jaaga Study is back!</h3>
+                <span class="meta"
+                    style="font-size: 0.9rem; color: #666; display: block; margin-bottom: 0.5rem; width: fit-content;">
+                    {{ post.date | date: "%b %d, %Y" }}
+                </span>
+                <a href="{{ post.url | relative_url }}">
+                    <h3>{{ post.title }}</h3>
                 </a>
-                <p>We are thrilled to launch the first cohort of the Creative AI Bootcamp. This 9-week
-                    experiment
-                    brings together artists, coders, and dreamers.</p>
-                <a href="{{ '/blog/001-jaaga-study-is-back.html' | relative_url }}" class="btn-outline"
+                <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                <a href="{{ post.url | relative_url }}" class="btn-outline"
                     style="margin-left:0; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
             </article>
+            {% endfor %}
 
         </div>
     </section>

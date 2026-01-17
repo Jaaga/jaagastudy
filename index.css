@@ -761,7 +761,9 @@ footer .partner-text {
 
 .light-section .right::before {
     border-color: transparent #e2e8f0 transparent transparent;
-}/* Manifesto Section Styling */
+}
+
+/* Manifesto Section Styling */
 .manifesto-container {
     max-width: 800px;
     margin: 3rem auto 5rem;
@@ -773,13 +775,15 @@ footer .partner-text {
     font-size: 2.2rem;
     line-height: 1.3;
     font-weight: 700;
-    color: var(--secondary-color); /* Deep Blue */
+    color: var(--secondary-color);
+    /* Deep Blue */
     margin-bottom: 2rem;
     letter-spacing: -0.5px;
 }
 
 .manifesto-lead .highlight-text {
-    color: var(--primary-color); /* Orange Highlight */
+    color: var(--primary-color);
+    /* Orange Highlight */
     position: relative;
     display: inline-block;
 }
@@ -792,7 +796,8 @@ footer .partner-text {
     left: 0;
     width: 100%;
     height: 8px;
-    background-color: rgba(243, 83, 36, 0.1); /* Soft Orange */
+    background-color: rgba(243, 83, 36, 0.1);
+    /* Soft Orange */
     z-index: -1;
     border-radius: 4px;
 }
@@ -800,7 +805,8 @@ footer .partner-text {
 .manifesto-body {
     font-size: 1.25rem;
     line-height: 1.8;
-    color: #4a5568; /* Soft readable gray */
+    color: #4a5568;
+    /* Soft readable gray */
     margin-bottom: 2.5rem;
     font-weight: 300;
 }
@@ -821,12 +827,51 @@ footer .partner-text {
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
+
 /* Blog Roll Title Color Override */
 .card h3 {
     color: #253F63 !important;
 }
+
 /* Fix blog roll date width */
 .card .meta {
     display: inline-block;
     width: fit-content;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--secondary-color);
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border-bottom: 3px solid var(--primary-color);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        width: 100%;
+    }
 }

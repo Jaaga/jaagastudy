@@ -6,10 +6,13 @@ baseurl: "/jaagastudy"
 navigation:
   - title: Home
     url: /
+    section: home
   - title: Bootcamp
     url: /bootcamps/creative-ai-bootcamp/01.html
+    section: bootcamp
   - title: Blog
     url: /blog.html
+    section: blog
   - title: Join Discord
     url: "https://discord.gg/ZtakuZXEF"
     external: true
@@ -20,4 +23,9 @@ defaults:
       path: ""
     values:
       layout: default
+  - scope:
+      path: "_posts"
+    values:
+      section: blog
+
 permalink: /blog/:title.html
